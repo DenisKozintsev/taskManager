@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Todo / Пэт-проект</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Менеджер задач</h1>
+        
+        <!-- Поле для добавления новых задач -->
+        <div class="todo-form">
+            <input type="text" id="taskInput" placeholder="Купить молоко...">
+            <button id="addButton">Добавить</button>
+        </div>
+
+        <!-- Кнопка для загрузки с API (AJAX) -->
+        <button id="loadApiButton" class="api-btn">Загрузить тестовые задачи (AJAX)</button>
+
+        <!-- Фильтры (работа с массивами) -->
+        <div class="filters">
+            <button data-filter="all" class="filter-btn active">Все</button>
+            <button data-filter="active" class="filter-btn">Активные</button>
+            <button data-filter="completed" class="filter-btn">Выполненные</button>
+        </div>
+
+        <!-- Список задач будет вставляться сюда через JS -->
+        <ul id="todoList" class="todo-list">
+            <!-- Пример того, как будет выглядеть задача: 
+            <li>
+                <input type="checkbox">
+                <span>Текст задачи</span>
+                <button>Удалить</button>
+            </li>
+            -->
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
